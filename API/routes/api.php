@@ -18,8 +18,8 @@ Route::get('/students',[studentcontroller::class,'list']);
 
 Route::get('/posts/{id}', [PostController::class, 'show']);
 
-// POST: Create a new post
-Route::post('/posts', [PostController::class, 'store']);
+Route::get('/posts', [PostController::class, 'index']); // For GET requests
+Route::post('/posts', [PostController::class, 'store']); // For POST requests
 
 // PUT: Update an existing post by ID
 Route::put('/posts/{id}', [PostController::class, 'update']);
